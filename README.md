@@ -1,10 +1,4 @@
-# webpack による TypeScript × Sass 開発環境構築方法
-
-リポジトリのクローン
-
-```
-git clone https://github.com/posipan/webpack-ts-sass.git
-```
+# webpack(ts)
 
 パッケージのインストール
 
