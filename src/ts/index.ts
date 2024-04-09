@@ -1,9 +1,10 @@
 // 追加
+import "../scss/base/reset.css";
+import "../scss/base/common.scss";
 import "../scss/home/index.scss";
 
-// addNum関数の読み込みと実行結果のConsole出力
-import { addNum } from "./addNum";
-import { testMessage } from "./function/testMessage";
+import { getFooter } from "./function/getFooter";
+import { getHeader } from "./function/getHeader";
 
-console.log(addNum(1, 5));
-console.log(testMessage);
+getHeader();
+getFooter();
