@@ -1,4 +1,3 @@
-// 追加
 import "../scss/base/reset.css";
 import "../scss/base/common.scss";
 import "../scss/home/index.scss";

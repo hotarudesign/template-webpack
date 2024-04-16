@@ -1,15 +1,15 @@
 const path = require("path");
-
-// 追加
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
   entry: {
-    main: "./src/ts/index.ts",
+    index: "./src/ts/index.ts",
+    about: "./src/ts/about/index.ts",
   },
 
   output: {
-    path: path.join(__dirname, "public/dist"),
+    filename: "assets/js/[name].js",
+    path: path.join(__dirname, "public/dist/"),
   },
 
   resolve: {
@@ -22,25 +22,20 @@ module.exports = {
         test: /\.ts$/,
         loader: "ts-loader",
       },
-      // 追加
       {
         test: /\.(scss|sass|css)$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
     ],
   },
-
-  // 追加
   // webpackの機能拡張
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "index.css", // アウトプットCSSファイル
+      filename: "assets/css/[name].css", // アウトプットCSSファイル
     }),
   ],
-
-  // 追加
   // ソースマップの作成
-  devtool: "source-map",
+  devtool: "inline-source-map",
 
   devServer: {
     static: {
